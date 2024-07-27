@@ -1,0 +1,32 @@
+$header: 1550px;
+$pc: 1190px;
+$laptop: 1360px;
+$md14: 1040px;
+$tablet: 992px;
+$mobile: 767px;
+$md4: 479.98px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1500;
+
+//======================================================================================================================
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  img {
+    display: none;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Noto+Serif:wdth,wght@62.5..100,500&display=swap');
+
+//color
+$white: #ffffff;
+$light: #f8f8f8;
+$black: #2f2616;
+
+//fonts
+$noto: 'Noto Serif', serif;
+$man: 'Manrope', sans-serif;

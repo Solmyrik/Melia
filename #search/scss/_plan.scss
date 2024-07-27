@@ -1,0 +1,71 @@
+.plan {
+  padding: 100px 0px;
+  text-align: center;
+  @media (max-width: $mobile) {
+    padding: 50px 0px;
+  }
+  &__container {
+    max-width: 740px;
+    text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: 60px;
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 133%;
+    text-align: center;
+    color: #2f2616;
+    font-family: $noto;
+    @media (max-width: $mobile) {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2f2616;
+    @media (max-width: $mobile) {
+      font-size: 10px;
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 580px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    text-align: center;
+    color: #2f2616;
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
+  }
+
+  &__btn {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2f2616;
+    padding: 12px 20px;
+    border: 1px solid #2f2616;
+    display: inline-block;
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
+  }
+}

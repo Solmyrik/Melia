@@ -1,0 +1,227 @@
+.bg-slider {
+  //   margin-top: 70px;
+  position: relative;
+
+  &__body {
+    min-width: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    min-width: 0;
+    position: relative;
+  }
+
+  &__scroll {
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    animation: arrow 2s infinite ease;
+  }
+
+  &__mouse {
+    cursor: pointer;
+
+    text-align: center;
+
+    // transform: translate(-50%);
+    &:hover {
+      animation-play-state: paused;
+
+      &::before,
+      &::after {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 96px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    @media (max-width: $mobile) {
+      font-size: 40px;
+    }
+  }
+  &__suptitle {
+    color: $white;
+  }
+
+  &__icon {
+    img {
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 150%;
+  }
+
+  &__btn {
+    margin-top: 30px;
+    display: inline-block;
+  }
+
+  &__slide {
+    // height: 100vh;
+    // width: 100vw;
+    position: relative;
+  }
+
+  &__img {
+    height: calc(100vh - 80px);
+    width: 100vw;
+    position: relative;
+    //  display: none;
+    @media (max-width: $pc) {
+      height: calc(100vh - 41px);
+    }
+    @media (max-height: 550px) {
+      height: 710px;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      background: rgba(0, 0, 0, 0.48);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.marquee {
+  position: absolute;
+  min-width: 700px;
+  width: 100%;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f8f8f8;
+  @media (max-width: $mobile) {
+    font-size: 10px;
+    top: 20px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .marquee p {
+    animation: marquee 15s linear infinite; /* Можно настроить длительность анимации для мобильных устройств */
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.content-bg-slider {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: $mobile) {
+    padding: 0px 50px;
+  }
+  &__container {
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 133%;
+    text-align: center;
+    color: #f8f8f8;
+    font-family: $noto;
+    margin-bottom: 30px;
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    text-align: center;
+    color: #f8f8f8;
+    margin-bottom: 120px;
+    max-width: 500px;
+    @media (max-width: $mobile) {
+      font-size: 12px;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__btn {
+    border: 1px solid #f8f8f8;
+    width: 261px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f8f8f8;
+    @media (max-width: $mobile) {
+      font-size: 12px;
+      width: 176px;
+      height: 32px;
+    }
+  }
+}
+
+.content-bg-slider__title,
+.content-bg-slider__description {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+.content-bg-slider__description {
+  transition: opacity 2.5s ease, transform 2.5s ease;
+}
+
+.content-bg-slider__title.active,
+.content-bg-slider__description.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-bg-slider__description {
+  transition-delay: 0.3s;
+}

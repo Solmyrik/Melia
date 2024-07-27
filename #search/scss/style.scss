@@ -1,0 +1,53 @@
+@import '_mixin';
+@import '_null.scss';
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  &._lock {
+    overflow: hidden;
+  }
+  &.lock {
+    overflow: hidden;
+  }
+}
+a {
+  color: $black;
+}
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+body {
+  color: $black;
+  font-size: 18px;
+  font-family: $man;
+  font-weight: 400;
+  height: 100%;
+  background-color: $white;
+  position: relative;
+  &._lock {
+    overflow: hidden;
+  }
+  &.lock {
+    overflow: hidden;
+  }
+}
+.main {
+  flex: 1 1 auto;
+}
+[class*='__container'] {
+  max-width: $pc;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+@import '_header';
+@import '_bg-slider';
+@import '_plan';
+@import '_list';
+@import '_footing';
+@import '_created';
+@import '_quantity';
+@import '_conveniences';

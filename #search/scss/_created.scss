@@ -1,0 +1,95 @@
+.created {
+  padding: 100px 0px;
+  @media (max-width: $mobile) {
+    padding: 50px 0px;
+  }
+  background-color: $light;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    @media (max-width: $tablet) {
+      gap: 50px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 108px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__image {
+    flex: 0 1 55%;
+    img {
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      order: 1;
+      flex: auto;
+    }
+  }
+
+  &__content {
+    flex: 0 1 45%;
+    @media (max-width: $tablet) {
+      order: 2;
+      flex: auto;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 109%;
+    color: #2f2616;
+    font-family: $noto;
+    margin-bottom: 10px;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 139%;
+    text-transform: uppercase;
+    color: #2f2616;
+    margin-bottom: 40px;
+    @media (max-width: $tablet) {
+      font-size: 10px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    color: #2f2616;
+    @media (max-width: $tablet) {
+      font-size: 12px;
+    }
+  }
+
+  &__btn {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2f2616;
+    padding: 12px 17px;
+    border: 1px solid #2f2616;
+    display: inline-block;
+    @media (max-width: $mobile) {
+      margin-top: 15px;
+      font-size: 12px;
+      padding: 10px 27px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.conveniences {
+  background-color: $light;
+  padding: 100px 0px;
+  @media (max-width: $mobile) {
+    padding: 50px 0px;
+  }
+  &__container {
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 133%;
+    text-align: center;
+    color: #2f2616;
+    font-family: $noto;
+    text-align: center;
+    margin-bottom: 10px;
+    @media (max-width: $tablet) {
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2f2616;
+    margin-bottom: 50px;
+    @media (max-width: $tablet) {
+      font-size: 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider {
+  }
+
+  &__block {
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__item {
+    width: 362px;
+    min-width: 362px;
+    padding: 18px;
+    background: #fff;
+    @media (max-width: $tablet) {
+      width: 225px;
+      min-width: 225px;
+      padding: 12px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 130%;
+    color: #2f2616;
+    font-family: $noto;
+    margin-bottom: 20px;
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    color: #2f2616;
+    @media (max-width: $tablet) {
+      font-size: 12px;
+    }
+  }
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
